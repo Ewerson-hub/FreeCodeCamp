@@ -1,0 +1,90 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:monospace;
+    font-size:16px;
+  }
+  :root{
+    --color-green:#37af65;
+    --color-blue:#1b1b32;
+    --color-dark-blue:rgba(27, 27, 50, 0.9);
+    --color-white:#f3f3f3;
+    --color-black:black;
+    
+  }
+  html,body{
+    width: 100%;
+    min-width:325px;
+  }
+  body{ 
+    display:flex;
+    justify-content: center;
+    background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQjUxvsvSbysKSs7o1EFfnxl-t_pCMnee4pA&usqp=CAU");
+  }
+  #main-container-div{
+    width:720px; 
+  }
+  #div-header{
+    margin:3em 0 3em 0;
+  }
+  #title, #description{
+    text-align:center;
+    margin-bottom:1rem;
+    color:var(--color-blue);
+    
+  }
+  #title{
+    font-size:2.5rem;
+  }
+  #survey-form{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-radius:0.25rem;
+    background-color:var(--color-dark-blue);
+    color:var(--color-white);
+  }
+  .form-organization-div{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    padding:3rem 3rem 0 3rem;
+  }
+  .form-organization-div > input, .form-organization-div > select{
+    height:2.5rem;
+    border:none;
+    border-radius:2px;
+    padding-left:4px;
+    
+    font-size:1rem;
+  }
+  .form-organization-div > label, .form-organization-div > span{
+    margin-bottom:.8rem;
+  }
+  #comment-textarea{
+    min-height:7.5rem;
+    width:100%;
+    resize: vertical;
+    font-size:1rem;
+  }
+  
+  #submit{
+    border:none;
+    border-radius:2px;
+    
+    background-color: var(--color-green);
+    color:var(--color-white);
+    
+    height:50px;
+    font-size: 1.5rem;
+  }
+  .button-submit-div{
+    margin-bottom: 2rem;
+  }
+  #submit:hover{
+    transform:scale(0.98);
+    border:2px solid white;
+    border-style:inset;
+  }

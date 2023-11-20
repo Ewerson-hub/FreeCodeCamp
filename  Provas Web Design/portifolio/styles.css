@@ -1,0 +1,269 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+  }
+  html, body {
+    min-height: 560px;
+    height: 100%;
+    width: 100%;
+    background-color:#4f8878;
+  }
+  header{
+    background-color:#4f8878;
+    max-width:100vw;
+    height:5rem;
+    
+    position:fixed;
+    top:0;
+    right:0;
+    left:0;
+    
+    display:flex;
+    flex-direction:row;
+    
+  }
+  #logo{
+    width:60%;
+  }
+  
+  /*     HEADER  */
+  #navbar{
+    width:40%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+  }
+  #navbar>div>a{
+    color:whitesmoke;
+    text-decoration: none;
+  }
+  /* WELCOME-SECTION  */
+  #welcome-section{
+    margin-top: 5rem;
+    background-color:#262729;
+    color:whitesmoke;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size: 1.5rem;
+  }
+  #welcome-section>p{
+    color:#4f8878;
+  }
+  /* PROJECTS SECTION  */
+  #projects{
+    min-height:100vh;
+    max-width:100vw;
+    background-color:whitesmoke;
+    color:black;
+  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:10px;
+    justify-items:center;
+  }
+  #h1-project{
+    grid-column:1 / 4;
+    text-align:center;
+    margin: 5rem 0 5rem 0;
+    font-size: 2rem;
+    
+  }
+  .project-tile > img{
+    max-width: 320px;
+  }
+  .project-tile{
+    width: 400px;
+    min-height: 405px;
+    border: 2px solid black;
+    margin-bottom:2rem;
+  
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+  }
+  #show-all{
+    grid-column: 1 / 4;
+    width: 150px;
+    height: 50px;
+    background-color:whitesmoke;
+    margin: 5rem 0 5rem 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#4f8878;
+    border: 2px solid #4f8878;
+    transition: all 0.7s ease-out;
+  
+    text-decoration:none;
+    font-weight:bold;
+    
+  }
+  #icon{ 
+    border:solid transparent;
+    box-shadow: 2px -2px 0 1px;
+    width:10px;
+    height:10px;
+    margin-left:2px;
+    transform:rotate(45deg);
+  }
+  #show-all > a{
+    display:block;
+  }
+  #show-all:hover #icon{
+    margin-left: .5rem;
+  }
+  #show-all:hover{
+    background-color: #4f8878;
+    color:whitesmoke;
+    
+  }
+  /* CONTACT SECTION  */
+  #contact{
+    max-width:100vw;
+    height:100vh;
+    background-color:#262729;
+    color:whitesmoke;
+  
+    display:flex; 
+    flex-direction: column;
+    font-size: 1.5rem;
+  }
+  #contact-h1{
+    margin-top: 5rem;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+  }
+  #choices{
+    max-width: 100%;
+    max-height: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+  #social-media-side, #form-side{
+    width: 50%;
+  }
+  #social-media-side > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #social-media-side > ul > li{
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem 0;
+  }
+  #profile-link{
+    text-decoration: none;
+    color:whitesmoke;
+  }
+  #form-side > form{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  #email, #message, #btn{
+    margin: 0.25rem 0 0.25rem 0
+  }
+  #email, #btn{
+    height: 30px;
+  }
+  #message{
+    resize: none;
+  }
+  /* FOOTER SECTION  */
+  footer{
+    margin-top:0.5rem;
+    padding: 10px;
+    background-color:#262729;
+    color:whitesmoke;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  @media (max-width:1250px){
+    #projects{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    #show-all, #h1-project{
+      grid-column: 1 / 3;
+    }
+  }
+  @media (max-width:835px){
+    #projects{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    #show-all, #h1-project{
+      grid-column: 1 / 2;
+    }
+  }
+  @media (max-width:493px){
+    *{
+      font-size: 98%
+    }
+    #logo{
+      width: 40%;
+    }
+    #navbar{
+      width: 60%;  
+    }
+    footer{
+      flex-direction: column;
+    }
+    footer > p{
+      padding: 10px 0 10px 0;
+    }
+  }
+  @media (max-width: 420px){
+      #logo{
+        width: 20%;
+      }
+      #navbar{
+        width: 80%;  
+      }
+      .project-tile{
+          max-width: 300px ;
+          max-height: 310px;
+      }
+      .project-tile > img{
+        max-width: 220px;
+      }
+      #contact{
+        font-size:1.4rem;
+      }
+      #contact-h1{
+        text-align: center;
+        margin-top: 3rem;
+        height: 10%;
+  /*       border: 2px solid whitesmoke; */
+      }
+      #choices{
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+      }
+      #social-media-side, #form-side{
+        width: 100%;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #social-media-side > h1, #form-side > h1{
+        text-align: center;
+        width: 100%;
+      }
+      #form-side > form{
+        width: 80%;
+      }
+  }

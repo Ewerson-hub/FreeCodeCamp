@@ -1,0 +1,173 @@
+*{
+    font-family:monospace;
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+  }
+  :root{
+    --color-primary: #75c58e;
+    --color-font:#4f4f4f;
+    --color-font-black: black;
+    --color-font-white:whitesmoke;
+    font-size: 16px;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  body{
+    width: 100%;
+    height: 100%;
+    max-width:100%;
+  }
+  #home,#books,#about-us{
+    padding-top: 3.1rem;
+    width: 100%;
+  }
+  #header, #footer{
+    background-color: var(--color-primary);
+  }
+  #header{
+    height: 10%;
+
+    display: grid;
+    grid-template-columns: 70% 30%;
+
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+  }
+  #header-img{
+    width: 70px;
+    padding-left: 10px;
+  }
+  #image-content{
+    display: flex;
+    align-items: center;
+  }
+  #image-content > h1{
+    padding-left: 20px;
+    color: var(--color-font);
+  }
+  #nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #nav-bar > a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color-font);
+  }
+  
+  #main{
+    color: var(--color-font);
+  }
+  #home{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  #home > #form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+  }
+  #form > p, #form >input{
+    margin: 5px;
+  }
+  #form > p{
+    text-align: center;
+  }
+  #form > input{
+    height: 30px;
+  }
+
+  #books{
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-book{
+    padding: 10px 0 0 0;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--color-font-black);
+  }
+  .book-image{
+    width: 150px;
+    height: 75%;
+  }
+  .book-title{
+    max-width: 150px;
+    text-align: center;
+  } 
+  .synopsis{
+    text-align: justify;
+    font-size: 0.6rem;
+    padding: 0 8px 0 8px;
+    height: 50%;
+  }
+  .select-card{
+    width: 100%;
+    margin-top: 3px;
+    height: 5%;
+  }
+  #about-us{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #about-us-description{
+    padding: 30px 5px 30px 5px;
+    text-align: center;
+  }
+  #video{
+    width: 500px;
+    height: 300px;
+    margin: 20px 0 20px 0;
+  }
+  #footer{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--color-font);
+  }
+  .buttons-style{
+    border:none;
+    background-color: var(--color-primary);
+    color: var(--color-font-black);
+    font-weight: bold;
+  }
+  @media(max-width:585px){
+    body{
+      font-size: 12px;
+    }
+    #books{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-book{
+      margin: 0 auto 10px auto;
+      max-width: 60%;
+    }
+  }
+  @media(max-width:520px){
+    body{
+      font-size: 10px;
+    }
+    #video{
+      width: 300px;
+      height: 100px;
+      margin: auto auto 10px auto;
+    }
+  }
+  
